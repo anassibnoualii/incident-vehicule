@@ -1,0 +1,23 @@
+
+<div class="panel panel-success">
+  <div class="panel-heading">Liste des incidents</div>
+  <div class="panel-body">
+    <div class="table-responsive">
+    <table class="table table-striped ">
+        <tr><th>ID</th><th>DateIncident</th><th>NuméroFiche</th><th>Oui</th><th>Lieu</th><th>nombre de voyageurs</th><th>description</th><th>Vehicule</th></tr>
+         <tr *ngFor="let i of incident" >
+        <td>{{i.id}}</td>
+        <td>{{i.date_incident}}</td>
+        <td>{{i.numero_fiche}}</td>
+        <td ><div *ngIf="!i.incident_critique;"> non critique </div><div *ngIf="i.incident_critique;"> critique</div>
+    </td>
+        <td>{{i.lieu_incident}}</td>
+        <td>{{i.nombre_voyageur}}</td>
+        <td>{{i.description_incident}}</td>
+        <td>{{i.vehicule.immatriculation}}</td>
+        </tr> 
+      </table>
+    </div>
+    </div>
+  </div>
+  

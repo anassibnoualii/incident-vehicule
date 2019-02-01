@@ -1,0 +1,44 @@
+<div class="panel panel-success">
+    <div class="panel-heading">Ajouter un nouvel incident</div>
+    <div class="panel-body">
+        
+        <div class="form-group ">
+            <label class="control-lable">DateIncident:</label><input  type="date" [(ngModel)]="incident.date_incident"  class="form-control">
+          </div>
+       
+      <div class="form-group">
+        <label class="control-lable">Numéro de fiche:</label><input class="form-control col-sm-6" type="text"  [(ngModel)]="incident.numero_fiche" >
+      </div>
+      <div class="form-group ">
+        <label class="control-lable ">incident critique:</label><input type="text"  [(ngModel)]="incident.incident_critique"  class="form-control">
+      </div>
+      <div class="form-group ">
+          <label class="control-lable ">nombre de voyageurs:</label><input type="text" [(ngModel)]="incident.nombre_voyageur"  class="form-control">
+        </div>
+        <div class="form-group ">
+            <label class="control-lable ">description:</label><input type="text" [(ngModel)]="incident.description_incident"  class="form-control">
+          </div>
+      <div class="form-group ">
+          <label class="control-lable ">Lieu d'incident:</label><input type="text" [(ngModel)]="incident.lieu_incident"  class="form-control">
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">Vehicule</div>
+            <div class="panel-body">
+                <div class="form-group ">
+                    <label class="control-lable ">ID:</label><input type="text" [(ngModel)]="vehicule.id"  class="form-control">
+                  </div>
+                  <div class="form-group ">
+                    <label class="control-lable ">Code interne:</label><input type="text" [(ngModel)]="vehicule.codeInterne"  class="form-control">
+                  </div>
+                  <div class="form-group ">
+                    <label class="control-lable ">date mise en circulation:</label><input type="text" [(ngModel)]="vehicule.dateMiseEnCirculation"  class="form-control">
+                  </div>
+                  <div class="form-group ">
+                    <label class="control-lable ">immatriculation:</label><input type="text" [(ngModel)]="vehicule.immatriculation"  class="form-control">
+                  </div>
+                
+            </div>
+          </div>            
+      <button (click)="back()"  (click)="saveFiche()" class="btn btn-success">Enregistrer</button> &nbsp; &nbsp; <button (click)="back()" class="btn btn-danger pull-right">Annuler</button>
+    </div>
+  </div>
